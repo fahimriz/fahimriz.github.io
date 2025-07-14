@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Md Fahim Rizwan - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Light gray background */
+            color: #334155; /* Dark slate gray text */
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #64748b;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #6366f1;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 8px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header Section -->
+    <header class="bg-white shadow-md py-4 px-6 md:px-12 lg:px-24 rounded-b-xl">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-indigo-600 rounded-lg p-2 hover:bg-indigo-50 transition-colors duration-300">Md Fahim Rizwan</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#about" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-300 rounded-lg p-2 hover:bg-indigo-50">About</a>
+                <a href="#skills" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-300 rounded-lg p-2 hover:bg-indigo-50">Skills</a>
+                <a href="#projects" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-300 rounded-lg p-2 hover:bg-indigo-50">Projects</a>
+                <a href="#publications" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-300 rounded-lg p-2 hover:bg-indigo-50">Publications</a>
+                <a href="#contact" class="text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-300 rounded-lg p-2 hover:bg-indigo-50">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-md p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-2">
+            <a href="#about" class="block text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-300 rounded-lg p-2 hover:bg-indigo-50">About</a>
+            <a href="#skills" class="block text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-300 rounded-lg p-2 hover:bg-indigo-50">Skills</a>
+            <a href="#projects" class="block text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-300 rounded-lg p-2 hover:bg-indigo-50">Projects</a>
+            <a href="#publications" class="block text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-300 rounded-lg p-2 hover:bg-indigo-50">Publications</a>
+            <a href="#contact" class="block text-gray-700 hover:text-indigo-600 font-medium transition-colors duration-300 rounded-lg p-2 hover:bg-indigo-50">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 md:px-12 lg:px-24 py-12">
+        <!-- About Section -->
+        <section id="about" class="flex flex-col md:flex-row items-center justify-center bg-white p-8 rounded-xl shadow-lg mb-12 transform transition-transform duration-500 hover:scale-105">
+            <div class="md:w-1/3 flex justify-center mb-6 md:mb-0">
+                <img src="https://placehold.co/200x200/6366f1/ffffff?text=Your+Photo" alt="Your Photo" class="w-48 h-48 rounded-full object-cover shadow-md border-4 border-indigo-200">
+            </div>
+            <div class="md:w-2/3 text-center md:text-left">
+                <h1 class="text-4xl font-extrabold text-gray-800 mb-4">Hi, I'm <span class="text-indigo-600">Md Fahim Rizwan</span>!</h1>
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    I am a passionate <span class="font-semibold text-indigo-700">IC Mask Design Engineer</span> with expertise in semiconductor design and layout. I thrive on
+                    translating circuit designs into precise physical layouts for integrated circuits, ensuring optimal performance and manufacturability. Beyond IC design, I also have a strong
+                    interest and experience in <span class="font-semibold text-indigo-700">Machine Learning</span>, applying its techniques to solve complex problems. My work is driven by a commitment to
+                    precision and a deep understanding of fabrication processes.
+                </p>
+                <a href="#contact" class="inline-block bg-indigo-600 text-white px-8 py-3 rounded-full text-lg font-semibold shadow-lg hover:bg-indigo-700 transform hover:scale-105 transition-all duration-300">
+                    Get in Touch
+                </a>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="bg-white p-8 rounded-xl shadow-lg mb-12 transform transition-transform duration-500 hover:scale-105">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">My Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="flex flex-col items-center p-4 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <img src="https://placehold.co/60x60/6366f1/ffffff?text=EDA" alt="EDA Tools Icon" class="w-12 h-12 mb-2">
+                    <span class="text-gray-700 font-medium">EDA Tools (Cadence, Synopsys)</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <img src="https://placehold.co/60x60/6366f1/ffffff?text=Layout" alt="IC Layout Icon" class="w-12 h-12 mb-2">
+                    <span class="text-gray-700 font-medium">IC Layout Design</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <img src="https://placehold.co/60x60/6366f1/ffffff?text=DRC" alt="DRC/LVS Icon" class="w-12 h-12 mb-2">
+                    <span class="text-gray-700 font-medium">DRC/LVS Verification</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <img src="https://placehold.co/60x60/6366f1/ffffff?text=GDSII" alt="GDSII Icon" class="w-12 h-12 mb-2">
+                    <span class="text-gray-700 font-medium">GDSII & OASIS</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <img src="https://placehold.co/60x60/6366f1/ffffff?text=Analog" alt="Analog/Digital Layout Icon" class="w-12 h-12 mb-2">
+                    <span class="text-gray-700 font-medium">Analog/Digital Layout</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <img src="https://placehold.co/60x60/6366f1/ffffff?text=Script" alt="Scripting Icon" class="w-12 h-12 mb-2">
+                    <span class="text-gray-700 font-medium">Scripting (Perl, Python)</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <img src="https://placehold.co/60x60/6366f1/ffffff?text=Process" alt="Process Tech Icon" class="w-12 h-12 mb-2">
+                    <span class="text-gray-700 font-medium">Semiconductor Process Tech</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <img src="https://placehold.co/60x60/6366f1/ffffff?text=PDK" alt="PDK Icon" class="w-12 h-12 mb-2">
+                    <span class="text-gray-700 font-medium">PDK & Foundry Interaction</span>
+                </div>
+                <!-- Machine Learning Skills (added for context, though not explicitly requested to be listed as separate skills) -->
+                <div class="flex flex-col items-center p-4 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <img src="https://placehold.co/60x60/6366f1/ffffff?text=ML" alt="Machine Learning Icon" class="w-12 h-12 mb-2">
+                    <span class="text-gray-700 font-medium">Machine Learning</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <img src="https://placehold.co/60x60/6366f1/ffffff?text=Data" alt="Data Analysis Icon" class="w-12 h-12 mb-2">
+                    <span class="text-gray-700 font-medium">Data Analysis</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <img src="https://placehold.co/60x60/6366f1/ffffff?text=Python" alt="Python Icon" class="w-12 h-12 mb-2">
+                    <span class="text-gray-700 font-medium">Python (for ML)</span>
+                </div>
+                <div class="flex flex-col items-center p-4 bg-indigo-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                    <img src="https://placehold.co/60x60/6366f1/ffffff?text=NN" alt="Neural Networks Icon" class="w-12 h-12 mb-2">
+                    <span class="text-gray-700 font-medium">Neural Networks</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="bg-white p-8 rounded-xl shadow-lg mb-12 transform transition-transform duration-500 hover:scale-105">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/400x250/a78bfa/ffffff?text=Project+1" alt="Project 1 Image" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2" id="project-title-1">Project Title One</h3>
+                    <p class="text-gray-600 mb-4" id="project-description-1">A brief description of your first project. Highlight the technologies used and its main features.</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium transition-colors duration-300 flex items-center">
+                            View Demo
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0l-7 7"></path></svg>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-700 transition-colors duration-300 flex items-center">
+                            GitHub
+                            <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.499.09.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.087 2.91.829.091-.645.359-1.087.654-1.334-2.22-.253-4.555-1.113-4.555-4.953 0-1.096.392-1.988 1.03-2.69-.104-.253-.448-1.274.097-2.659 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.385.202 2.406.097 2.659.637.702 1.029 1.594 1.029 2.69 0 3.848-2.339 4.695-4.566 4.943.369.319.685.921.685 1.852 0 1.335-.012 2.41-.012 2.727 0 .268.18.579.688.482C21.137 20.188 24 16.42 24 12.017 24 6.484 19.522 2 14 2h-2z"></path></svg>
+                        </a>
+                    </div>
+                    <button class="generate-description-btn w-full bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-semibold shadow-md hover:bg-purple-700 transform hover:scale-105 transition-all duration-300 mt-4" data-project-id="1">
+                        ✨ Generate Description
+                    </button>
+                    <div id="loading-1" class="text-center text-sm text-gray-500 mt-2 hidden">
+                        <div class="loading-spinner"></div> Generating...
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/400x250/a78bfa/ffffff?text=Project+2" alt="Project 2 Image" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2" id="project-title-2">Project Title Two</h3>
+                    <p class="text-gray-600 mb-4" id="project-description-2">A brief description of your second project. Explain its purpose and your role in its development.</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium transition-colors duration-300 flex items-center">
+                            View Demo
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0l-7 7"></path></svg>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-700 transition-colors duration-300 flex items-center">
+                            GitHub
+                            <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.499.09.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.087 2.91.829.091-.645.359-1.087.654-1.334-2.22-.253-4.555-1.113-4.555-4.953 0-1.096.392-1.988 1.03-2.69-.104-.253-.448-1.274.097-2.659 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.385.202 2.406.097 2.659.637.702 1.029 1.594 1.029 2.69 0 3.848-2.339 4.695-4.566 4.943.369.319.685.921.685 1.852 0 1.335-.012 2.41-.012 2.727 0 .268.18.579.688.482C21.137 20.188 24 16.42 24 12.017 24 6.484 19.522 2 14 2h-2z"></path></svg>
+                        </a>
+                    </div>
+                    <button class="generate-description-btn w-full bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-semibold shadow-md hover:bg-purple-700 transform hover:scale-105 transition-all duration-300 mt-4" data-project-id="2">
+                        ✨ Generate Description
+                    </button>
+                    <div id="loading-2" class="text-center text-sm text-gray-500 mt-2 hidden">
+                        <div class="loading-spinner"></div> Generating...
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:scale-105">
+                    <img src="https://placehold.co/400x250/a78bfa/ffffff?text=Project+3" alt="Project 3 Image" class="w-full h-48 object-cover rounded-lg mb-4 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2" id="project-title-3">Project Title Three</h3>
+                    <p class="text-gray-600 mb-4" id="project-description-3">A brief description of your third project. Focus on the problem it solves and its impact.</p>
+                    <div class="flex justify-between items-center mt-4">
+                        <a href="#" class="text-indigo-600 hover:text-indigo-800 font-medium transition-colors duration-300 flex items-center">
+                            View Demo
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0l-7 7"></path></svg>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-700 transition-colors duration-300 flex items-center">
+                            GitHub
+                            <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.499.09.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.087 2.91.829.091-.645.359-1.087.654-1.334-2.22-.253-4.555-1.113-4.555-4.953 0-1.096.392-1.988 1.03-2.69-.104-.253-.448-1.274.097-2.659 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.385.202 2.406.097 2.659.637.702 1.029 1.594 1.029 2.69 0 3.848-2.339 4.695-4.566 4.943.369.319.685.921.685 1.852 0 1.335-.012 2.41-.012 2.727 0 .268.18.579.688.482C21.137 20.188 24 16.42 24 12.017 24 6.484 19.522 2 14 2h-2z"></path></svg>
+                        </a>
+                    </div>
+                    <button class="generate-description-btn w-full bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-semibold shadow-md hover:bg-purple-700 transform hover:scale-105 transition-all duration-300 mt-4" data-project-id="3">
+                        ✨ Generate Description
+                    </button>
+                    <div id="loading-3" class="text-center text-sm text-gray-500 mt-2 hidden">
+                        <div class="loading-spinner"></div> Generating...
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="bg-white p-8 rounded-xl shadow-lg mb-12 transform transition-transform duration-500 hover:scale-105">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">My Publications</h2>
+            <div class="max-w-3xl mx-auto text-gray-700 text-lg leading-relaxed">
+                <ul class="list-disc pl-5 space-y-4">
+                    <li>
+                        <span class="font-semibold text-indigo-700">Design of a Biosignal Based Stress Detection System Using Machine Learning Techniques</span><br>
+                        <span class="text-sm text-gray-500">
+                            (You can add conference/journal details, year, and a link here if available)
+                        </span>
+                    </li>
+                    <li>
+                        <span class="font-semibold text-indigo-700">Design of a low-cost Hand Gesture Controlled Automated Wheelchair</span><br>
+                        <span class="text-sm text-gray-500">
+                            (You can add conference/journal details, year, and a link here if available)
+                        </span>
+                    </li>
+                    <li>
+                        <span class="font-semibold text-indigo-700">Support Vector Machine based Stress Detection System to manage COVID-19 pandemic related stress from ECG signal</span><br>
+                        <span class="text-sm text-gray-500">
+                            (You can add conference/journal details, year, and a link here if available)
+                        </span>
+                    </li>
+                </ul>
+                <p class="text-center mt-6">
+                    Find more of my academic work on <a href="https://scholar.google.com/citations?hl=en&user=Gv2q5hcAAAAJ" target="_blank" class="text-indigo-600 hover:underline font-medium">Google Scholar</a>.
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-white p-8 rounded-xl shadow-lg transform transition-transform duration-500 hover:scale-105">
+            <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Get in Touch</h2>
+            <div class="max-w-xl mx-auto">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition-all duration-200" placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition-all duration-200" placeholder="your.email@example.com">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="5" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition-all duration-200" placeholder="Your message..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-indigo-600 text-white px-6 py-3 rounded-md text-lg font-semibold shadow-lg hover:bg-indigo-700 transform hover:scale-105 transition-all duration-300">
+                        Send Message
+                    </button>
+                </form>
+                <p class="text-center text-gray-600 mt-6">
+                    You can also reach me directly at: <a href="mailto:your.email@example.com" class="text-indigo-600 hover:underline">your.email@example.com</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-white py-8 px-6 md:px-12 lg:px-24 text-center rounded-t-xl mt-12">
+        <div class="container mx-auto">
+            <p>&copy; 2025 Md Fahim Rizwan. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="https://github.com/fahimriz" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.499.09.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.087 2.91.829.091-.645.359-1.087.654-1.334-2.22-.253-4.555-1.113-4.555-4.953 0-1.096.392-1.988 1.03-2.69-.104-.253-.448-1.274.097-2.659 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.385.202 2.406.097 2.659.637.702 1.029 1.594 1.029 2.69 0 3.848-2.339 4.695-4.566 4.943.369.319.685.921.685 1.852 0 1.335-.012 2.41-.012 2.727 0 .268.18.579.688.482C21.137 20.188 24 16.42 24 12.017 24 6.484 19.522 2 14 2h-2z"></path></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/fahimrizwan" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                </a>
+                <a href="https://x.com/FahimRizwan6" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.003 0-5.44 2.437-5.44 5.439 0 .426.048.839.135 1.237-4.527-.225-8.531-2.39-11.214-5.688-.467.805-.735 1.73-.735 2.723 0 1.882.959 3.541 2.419 4.516-.89-.029-1.729-.274-2.46-.676v.069c0 2.632 1.872 4.823 4.35 5.31-.456.124-.938.189-1.436.189-.353 0-.696-.034-1.029-.098.692 2.158 2.704 3.738 5.093 3.782-1.857 1.458-4.192 2.339-6.759 2.339-.439 0-.872-.025-1.298-.076 2.405 1.536 5.253 2.436 8.309 2.436 9.967 0 15.401-8.253 15.401-15.401 0-.235-.005-.468-.013-.701.94-.679 1.758-1.527 2.401-2.497z"></path></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Store original descriptions for potential revert (though not implemented in UI for simplicity)
+        const originalDescriptions = {};
+        document.querySelectorAll('[id^="project-description-"]').forEach(p => {
+            originalDescriptions[p.id] = p.textContent;
+        });
+
+        // Function to call Gemini API
+        async function generateProjectDescription(projectId) {
+            const projectTitleElement = document.getElementById(`project-title-${projectId}`);
+            const projectDescriptionElement = document.getElementById(`project-description-${projectId}`);
+            const loadingElement = document.getElementById(`loading-${projectId}`);
+            const generateButton = document.querySelector(`.generate-description-btn[data-project-id="${projectId}"]`);
+
+            if (!projectTitleElement || !projectDescriptionElement || !loadingElement || !generateButton) {
+                console.error(`Elements for project ID ${projectId} not found.`);
+                return;
+            }
+
+            const projectTitle = projectTitleElement.textContent;
+            const currentDescription = projectDescriptionElement.textContent;
+
+            // Show loading indicator and disable button
+            loadingElement.classList.remove('hidden');
+            generateButton.disabled = true;
+            generateButton.textContent = 'Generating...';
+
+            const prompt = `Write a detailed, professional project description for a portfolio website. The project is titled "${projectTitle}". The current brief description is: "${currentDescription}". Expand on this, focusing on the problem it solves, the technologies likely involved for an IC Mask Design Engineer with Machine Learning interests, and its impact or features. Keep it concise but informative.`;
+
+            let chatHistory = [];
+            chatHistory.push({ role: "user", parts: [{ text: prompt }] });
+
+            try {
+                const payload = { contents: chatHistory };
+                const apiKey = ""; // Canvas will provide this
+                const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+
+                if (result.candidates && result.candidates.length > 0 &&
+                    result.candidates[0].content && result.candidates[0].content.parts &&
+                    result.candidates[0].content.parts.length > 0) {
+                    const generatedText = result.candidates[0].content.parts[0].text;
+                    projectDescriptionElement.textContent = generatedText;
+                } else {
+                    projectDescriptionElement.textContent = "Failed to generate description. Please try again.";
+                    console.error("Gemini API response structure unexpected:", result);
+                }
+            } catch (error) {
+                console.error("Error calling Gemini API:", error);
+                projectDescriptionElement.textContent = "Error generating description. Please check console for details.";
+            } finally {
+                // Hide loading indicator and re-enable button
+                loadingElement.classList.add('hidden');
+                generateButton.disabled = false;
+                generateButton.textContent = '✨ Generate Description';
+            }
+        }
+
+        // Add event listeners to all generate buttons
+        document.querySelectorAll('.generate-description-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const projectId = button.dataset.projectId;
+                generateProjectDescription(projectId);
+            });
+        });
+    </script>
+</body>
+</html>
